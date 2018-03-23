@@ -10,7 +10,7 @@ class YourTestClass(TestCase):
         #act
         todoList = TodoList()
         #assert
-        self.assertTrue(todoList.isEmpty())
+        self.assertTrue(todoList.is_empty())
         
     def test_add_task(self):
         #arrange
@@ -20,6 +20,6 @@ class YourTestClass(TestCase):
         todoList.add_task('afeitar al gato')
         
         #assert
-        self.assertFalse(todoList.isEmpty())
+        self.assertFalse(todoList.is_empty())
         self.assertEquals('afeitar al gato', todoList.first_task())
         
